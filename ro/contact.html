@@ -1,0 +1,95 @@
+<?php 
+if(isset($_POST['submit'])){
+    $to = "contact@sistemulsultanilor.netne.net"; // this is your Email address
+    $from = $_POST['email']; // this is the sender's Email address
+    $name = $_POST['name'];
+    $subject = "Contact SistemulSultanilor";
+    $message = $name . " spune:" . "\n\n" . $_POST['message'];
+    $headers = "De la: " . $from;
+	
+    mail($to,$subject,$message,$headers);
+    }
+?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>În pași de dans</title>
+		<link rel="shortcut icon" href="images/favicon.ico">
+        <meta name="keywords" content="" />
+        <meta name="description" content="" />
+        <link href="styles.css" rel="stylesheet" type="text/css" media="screen" />
+    </head>
+    <body>
+    	<div id="wrap">
+				<div id="menu">
+					<ul>
+						<li><a href="index.html" >Acasă</a></li>
+						<li><a href="regulament.html">Regulament</a></li>
+						<li><a href="galerie.html">Galerie</a></li>
+						<li><a href="despre.html" >Despre noi</a></li>
+						<li><a href="contact.html" class="active">Contact</a></li>
+					</ul>
+				</div>
+				<div id="top_padding"></div>
+				
+				<div id="content_top"></div>
+				
+				<div id="content_bg_repeat">
+					
+					<div id="content">
+                    <div class="contact_content_left">
+                        <h5>Contact</h5>
+                         <p>În caz de neînțelegerea regulamentului/datei concursului/probleme cu înscrierile etc. nu vă sfiiți a ne contacta.</p><br>
+                         <p>Pentru a ne contacta folosiți una din modalitățile de mai jos:</p><br>
+						 <p><a href="https://www.facebook.com/inpasidedansalexandria?ref=hl">Facebook</a></p><br>
+						 <p>E-mail: <strong>chiarchim@yahoo.com</strong></p><br>
+                         </p>
+                        <div id="contact_form">
+						<p>Completați formularul de mai jos pentru a ne trimite un mesaj:</p>
+				
+					<form action="" method="post">
+						<div class="row uniform">
+							<div class="6u 12u$(small)">
+								<input name="name" id="name" value="" placeholder="Nume" type="text">
+							</div>
+							<div class="6u$ 12u$(small)">
+								<input name="email" id="email" value="" placeholder="E-mail" type="email">
+							</div>
+							<div class="12u$">
+								<textarea name="message" id="message" placeholder="Mesaj" rows="6"></textarea>
+							</div>
+							<div class="12u$">
+								<ul class="actions">
+									<li><input value="Trimite mesaj" class="special big" type="submit" name="submit"></li>
+								</ul>
+							</div>
+						</div>
+					</form>
+						</div>
+                    </div>
+                    <div class="contact_content_right">
+                        <h6>Locatia noastra</h6>
+                        <div class="pad_left_con">
+                            <p><a href="https://www.google.ro/maps/place/Liceul+Teoretic+%22Alexandru+Ioan+Cuza%22+Alexandria/@43.9350861,25.3564333,11.25z/data=!4m2!3m1!1s0x0:0x98e0137097cda76e!6m1!1e1"><img src="images/location.jpg" alt="" title="" style="margin-bottom: 10px;"/></a>
+                            <a href="https://www.google.ro/maps/place/Liceul+Teoretic+%22Alexandru+Ioan+Cuza%22+Alexandria/@43.9350861,25.3564333,11.25z/data=!4m2!3m1!1s0x0:0x98e0137097cda76e!6m1!1e1">Vezi pe harta</a></p>
+                            <p>&nbsp;</p>
+                            <p>Strada Carpati, nr. 27</p>
+                            <p>Alexandria, Teleorman</p>
+                            <p><a>E-mail: </a></p>
+                            <p><a>chiarchim@yahoo.com</a></p>
+                      </div>
+                    </div>
+
+                    <div style="clear: both"></div></div>
+					
+				</div>
+				<div id="content_bottom"></div>
+				<div id="footer_bot">
+				<h6><p>Powered by <a href="http://www.metamorphozis.com/" title="Flash Templates">Flash Templates</a></p></h6>
+				<h6><p>&copy; Copyright  2016. Design by <a>Tecșor Andrei & Ciobotaru Mihai</a>. Toate drepturile rezervate.</p></h6>
+				</div>
+		</div>
+    </body>
+</html>

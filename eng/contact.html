@@ -1,0 +1,95 @@
+<?php 
+if(isset($_POST['submit'])){
+    $to = "contact@sistemulsultanilor.netne.net"; // this is your Email address
+    $from = $_POST['email']; // this is the sender's Email address
+    $name = $_POST['name'];
+    $subject = "Contact SistemulSultanilor";
+    $message = $name . " spune:" . "\n\n" . $_POST['message'];
+    $headers = "De la: " . $from;
+	
+    mail($to,$subject,$message,$headers);
+    }
+?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>În pași de dans</title>
+		<link rel="shortcut icon" href="images/favicon.ico">
+        <meta name="keywords" content="" />
+        <meta name="description" content="" />
+        <link href="styles.css" rel="stylesheet" type="text/css" media="screen" />
+    </head>
+    <body>
+    	<div id="wrap">
+				<div id="menu">
+					<ul>
+						<li><a href="index.html" >Home</a></li>
+						<li><a href="regulament.html">Rules</a></li>
+						<li><a href="galerie.html">Gallery</a></li>
+						<li><a href="despre.html" >About us</a></li>
+						<li><a href="contact.html" class="active">Contact</a></li>
+					</ul>
+				</div>
+				<div id="top_padding"></div>
+				
+				<div id="content_top"></div>
+				
+				<div id="content_bg_repeat">
+					
+					<div id="content">
+                    <div class="contact_content_left">
+                        <h5>Contact</h5>
+                         <p>If you don't understand the rules or you have any questions don't hesitate to contact us.</p><br>
+                         <p>In order to contact us use one of the following method:</p><br>
+						 <p><a href="https://www.facebook.com/inpasidedansalexandria?ref=hl">Facebook</a></p><br>
+						 <p>E-mail: <strong>chiarchim@yahoo.com</strong></p><br>
+                         </p>
+                        <div id="contact_form">
+						<p>Complete the following form to send us a message:</p>
+				
+					<form action="" method="post">
+						<div class="row uniform">
+							<div class="6u 12u$(small)">
+								<input name="name" id="name" value="" placeholder="Name" type="text">
+							</div>
+							<div class="6u$ 12u$(small)">
+								<input name="email" id="email" value="" placeholder="E-mail" type="email">
+							</div>
+							<div class="12u$">
+								<textarea name="message" id="message" placeholder="Message" rows="6"></textarea>
+							</div>
+							<div class="12u$">
+								<ul class="actions">
+									<li><input value="Send" class="special big" type="submit" name="submit"></li>
+								</ul>
+							</div>
+						</div>
+					</form>
+						</div>
+                    </div>
+                    <div class="contact_content_right">
+                        <h6>Location</h6>
+                        <div class="pad_left_con">
+                            <p><a href="https://www.google.ro/maps/place/Liceul+Teoretic+%22Alexandru+Ioan+Cuza%22+Alexandria/@43.9350861,25.3564333,11.25z/data=!4m2!3m1!1s0x0:0x98e0137097cda76e!6m1!1e1"><img src="images/location.jpg" alt="" title="" style="margin-bottom: 10px;"/></a>
+                            <a href="https://www.google.ro/maps/place/Liceul+Teoretic+%22Alexandru+Ioan+Cuza%22+Alexandria/@43.9350861,25.3564333,11.25z/data=!4m2!3m1!1s0x0:0x98e0137097cda76e!6m1!1e1">Google maps</a></p>
+                            <p>&nbsp;</p>
+                            <p>Carpați Str., no. 27</p>
+                            <p>Alexandria, Teleorman county</p>
+                            <p><a>E-mail: </a></p>
+                            <p><a>chiarchim@yahoo.com</a></p>
+                      </div>
+                    </div>
+
+                    <div style="clear: both"></div></div>
+					
+				</div>
+				<div id="content_bottom"></div>
+				<div id="footer_bot">
+				<h6><p>Powered by <a href="http://www.metamorphozis.com/" title="Flash Templates">Flash Templates</a></p></h6>
+				<h6><p>&copy; Copyright  2016. Design by <a>Tecșor Andrei & Ciobotaru Mihai</a>. Toate drepturile rezervate.</p></h6>
+				</div>
+		</div>
+    </body>
+</html>
